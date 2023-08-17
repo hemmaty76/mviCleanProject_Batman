@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.sis.base.utils.UiState" />
+
+        <variable
+            name="state"
+            type="com.sis.base.utils.UiState" />
+
+        <variable
+            name="retryListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        bind:goneWhenNothing="@{state}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            bind:lottie_autoPlay="true"
+            bind:lottie_loop="true"
+            bind:visibleIsLoading="@{state}"
+            android:scaleX="2.2"
+            android:scaleY="2.2"
+            bind:lottie_renderMode="automatic"
+            bind:layout_constraintBottom_toBottomOf="parent"
+            bind:layout_constraintDimensionRatio="4:2"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            bind:lottie_rawRes="@raw/loading" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            bind:visibleIsEmptyOrError="@{state}"
+            bind:layout_constraintDimensionRatio="1:1"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            bind:lottie_autoPlay="true"
+            bind:lottie_loop="true"
+            bind:lottie_rawRes="@raw/state" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
+            bind:layout_constraintBottom_toBottomOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            bind:layout_constraintVertical_bias="0.55"
+            bind:messageUiState="@{state}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:backgroundTint="@color/design_default_color_primary_dark"
+            android:onClick="@{retryListener}"
+            android:padding="@dimen/default_padding"
+            android:text="@string/retry"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/white"
+            bind:cornerRadius="@dimen/default_radius"
+            bind:layout_constraintBottom_toBottomOf="parent"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintTop_toTopOf="parent"
+            bind:visibleIsError="@{state}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

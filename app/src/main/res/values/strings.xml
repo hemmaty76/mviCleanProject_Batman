@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Batman</string>
+    <string name="retry">Retry</string>
+    <string name="valueColon">%s : %s</string>
+
+    <string name="writer">Writer</string>
+    <string name="actors">Actors</string>
+    <string name="genre">Genre</string>
+    <string name="awards">Awards</string>
+
+
+    <string name="errorMessage">An error has occurred</string>
+    <string name="empty">There is no data to display</string>
+    <string name="ERROR_404">The desired information was not found</string>
+    <string name="ERROR_500">Server error! Please try again later</string>
+    <string name="ERROR_DISCONNECTED">Internet connection error</string>
+    <string name="ERROR_UNKNOWN">Unknown error</string>
+    <string name="ERROR_204">There is no data</string>
+    <string name="ERROR_429">The number of your allowed requests has ended!!</string>
+    <string name="somethingWentWrong">An error has occurred. Try again</string>
+    <string name="ERROR_TIME_OUT">No response received</string>
+    <string name="favorite">Favorite</string>
+    <string name="enterSearchText">Enter Search Text</string>
+
+</resources>

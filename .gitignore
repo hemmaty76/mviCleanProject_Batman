@@ -1,0 +1,32 @@
+# Gradle files
+.gradle/
+/build/
+
+# Local configuration file
+local.properties
+
+# Log Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+*.hprof
+
+# Keystore files
+*.jks
+*.keystore
+
+
+# Other
+.DS_Store

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_radius">12dp</dimen>
+    <dimen name="big_text">15sp</dimen>
+    <dimen name="top_elevation">4dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="medium_text">12sp</dimen>
+    <dimen name="small_text">9sp</dimen>
+</resources>
